@@ -24,7 +24,9 @@ exec(char *path, char **argv)
 
   if((ip = namei(path)) == 0){
     end_op();
+#ifndef XV6_PDX
     cprintf("exec: fail\n");
+#endif
     return -1;
   }
   ilock(ip);

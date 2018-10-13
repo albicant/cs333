@@ -1,4 +1,3 @@
-// Morrissey's version -- not released to students.
 /*
   A basic test suite for Portland State University CS333 Operating Systems Project 2.
   Created by Joe Coleman
