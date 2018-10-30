@@ -54,7 +54,7 @@ completeness.
 reading is now atomic.
 
 1e. All uses of tickslock (e.g., sys_sleep()) have been removed. This
-necessitated surgery on sleep() in pro.c. Calling sleep with a NULL lock
+necessitated surgery on sleep() in proc.c. Calling sleep with a NULL lock
 is now legal but is limited to sys_sleep(). CAUTION
 
 2. A new feature was added to the scheduler to turn off the CPU for

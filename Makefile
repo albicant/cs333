@@ -29,14 +29,14 @@ CS333_TPROGS += _p2-test _testsetuid _testuidgid
 endif
 
 ifeq ($(CS333_PROJECT), 4)
-CS333_CFLAGS += -DCS333_P1 -DUSE_BUILTINS -DCS333_P2 -DCS333_P4
+CS333_CFLAGS += -DCS333_P1 -DUSE_BUILTINS -DCS333_P2 -DCS333_P3 -DCS333_P4
 CS333_UPROGS += _date _time _ps
 CS333_TPROGS += _p2-test _testsetuid _testuidgid _p4-test
 endif
 
 ifeq ($(CS333_PROJECT), 5)
 CS333_CFLAGS += -DUSE_BUILTINS -DCS333_P1 -DCS333_P2 \
-	-DCS333_P3P4 -DCS333_P5
+	-DCS333_P3 -DCS333_P4 -DCS333_P5
 # if P3 and P4 functionality not wanted
 # CS333_CFLAGS += -DCS333_P1 -DUSE_BUILTINS -DCS333_P2 -DCS333_P5
 CS333_UPROGS += _date _time _ps _chgrp  _chmod _chown

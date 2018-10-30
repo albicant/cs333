@@ -24,7 +24,7 @@ exec(char *path, char **argv)
 
   if((ip = namei(path)) == 0){
     end_op();
-#ifndef XV6_PDX
+#ifndef PDX_XV6
     cprintf("exec: fail\n");
 #endif
     return -1;
