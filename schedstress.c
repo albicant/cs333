@@ -1,4 +1,4 @@
-#ifdef CS333_P3P4
+#ifdef CS333_P4
 #include "types.h"
 #include "user.h"
 
@@ -7,7 +7,7 @@
 #define MAX_PRIORITY 7
 
 // stress-test the MLFQ scheduler
-// 
+//
 // Note that this program doesn't necessarily do proper error-checking for all
 // system calls, since it's not meant to test that. This is only intended to
 // verify that MLFQ is behaving properly, and adding error-handling would make

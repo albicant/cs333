@@ -1,4 +1,4 @@
-#ifdef CS333_P3P4
+#ifdef CS333_P4
 // Credit to Jacob Collins <jmc27@pdx.edu> who developed this test
 // program and gave me permission to use it
 

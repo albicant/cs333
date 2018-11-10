@@ -25,12 +25,12 @@
 #define DEFAULT_UID 0
 #define DEFAULT_GID 0
 #endif // CS333_P2
-#ifdef CS333_P3P4
+#ifdef CS333_P4
 #define DEFAULT_BUDGET (3*TPS)
 #define DEFAULT_PRIORITY 0
 #define TICKS_TO_PROMOTE (20*TPS)
 #define MAXPRIO 7 /* max prio. 0 <= prio <= MAXPRIO */
-#endif // CS333_P3P4
+#endif // CS333_P4
 #ifdef CS333_P5
 #define DEFAULT_MODE 0755
 #endif // CS333_P5
