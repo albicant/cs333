@@ -335,6 +335,9 @@ dist-test:
 # make a new revision.
 tar:
 	$(MAKE) dist
+	@echo
+	@echo Did you remember to update runoff.list?
+	@echo
 	(tar cf - dist) | gzip >xv6-pdxP$(CS333_PROJECT).tar
 
 .PHONY: dist-test dist
