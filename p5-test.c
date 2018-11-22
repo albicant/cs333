@@ -344,7 +344,6 @@ main(int argc, char *argv[])
   }
 
   printf(1, "\nDone for now\n");
-  free(buf);
   exit();
 }
 
