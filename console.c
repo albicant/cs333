@@ -192,6 +192,9 @@ void
 consoleintr(int (*getc)(void))
 {
   int c, doprocdump = 0;
+#ifdef CS333_P3
+  int doprocreadyprint = 0, doprocfreeprint = 0, doprocsleepprint = 0, doproczombieprint = 0;
+#endif // CS333_P3
 
   acquire(&cons.lock);
   while((c = getc()) >= 0){
@@ -213,6 +216,20 @@ consoleintr(int (*getc)(void))
         consputc(BACKSPACE);
       }
       break;
+#ifdef CS333_P3
+    case C('R'):
+      doprocreadyprint = 1;
+      break;
+    case C('F'):
+      doprocfreeprint = 1;
+      break;
+    case C('S'):
+      doprocsleepprint = 1;
+      break;
+    case C('Z'):
+      doproczombieprint = 1;
+      break;
+#endif // CS333_P3
     default:
       if(c != 0 && input.e-input.r < INPUT_BUF){
         c = (c == '\r') ? '\n' : c;
@@ -230,6 +247,20 @@ consoleintr(int (*getc)(void))
   if(doprocdump) {
     procdump();  // now call procdump() wo. cons.lock held
   }
+#ifdef CS333_P3
+  if(doprocreadyprint){
+    procReadyPrint();
+  }
+  if(doprocfreeprint){
+    procFreePrint();
+  }
+  if(doprocsleepprint){
+    procSleepPrint();
+  }
+  if(doproczombieprint){
+    procZombiePrint();
+  }
+#endif // CS333_P3
 }
 
 int
